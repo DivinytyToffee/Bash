@@ -1,0 +1,6 @@
+#!/bin/bash
+find /bin | xargs grep -s -l –e -h '^#!/'| uniq –c | sort -nr
+
+
+
+#find /bin -type f -perm +a=x | xargs grep -s -h –e '^#!/' 

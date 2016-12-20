@@ -1,0 +1,119 @@
+#!/bin/bash
+rm ~/lab5/temptemp 2> /dev/null
+rm ~/lab5/tempDIRadd 2> /dev/null
+rm ~/lab5/tempadd 2> /dev/null
+rm ~/lab5/tempchange 2> /dev/null
+rm ~/lab5/TEMPFORBACK 2> /dev/null
+rm ~/lab5/TEMPFORSORS 2> /dev/null
+touch ~/lab5/temptemp
+touch ~/lab5/tempDIRadd
+touch ~/lab5/tempadd
+touch ~/lab5/tempchange
+touch ~/lab5/TEMPFORBACK
+touch ~/lab5/TEMPFORSORS
+checkforsource=$(find /home/user/source 2> /home/user/errors)
+if [[ $checkforsource == "" ]]
+then
+echo "Каталог source отсутствует! Пожалуйста, создайте его!"
+kill -2 $$
+fi
+ 
+scriptDate=$(date +%F)
+backupDate=$(date -d "7 days ago" +%F)
+findDate=$(find /home/user -name "Backup-*" 2> /dev/null | awk -F '/' '{print $4}' | awk -F '-' '{print $2"-"$3"-"$4}')
+
+pathi="/home/user/source"
+ 
+for line in $(ls -R /home/user/source)
+do
+per=$(echo $line | grep $pathi | rev | cut -c 2- | rev)
+if [[ $per == "" ]]
+then
+find /home/user/source -name $line | sed '/^$/d' >> ~/lab5/TEMPFORSORS
+fi
+done
+       
+if [[ $findDate != "" ]]
+then
+if [[ "$(date -d "$backupDate" +%s)" -ge "$(date -d "$findDate" +%s)" ]]
+then
+    echo "create catalog cause too old"
+    mkdir /home/user/$(echo $scriptDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')
+    cp /home/user/source/* /home/user/$(echo $scriptDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')
+    echo "Каталог с резервными копиями создан "$scriptDate >> /home/user/backup-report  
+    cat ~/lab5/TEMPFORSORS | sed '/^$/d' | awk -F '/' '{$1=""; $2=""; $3=""; $4=""; OFS="/"; print $0}' | cut -c 5- | sed '/^$/d' >> /home/user/backup-report
+else   
+    #find /home/user/$(echo "Backup-"$findDate) -name $l >> TEMPFORBACK
+   
+    patni="/home/user/Backup-"$findDate
+    for lineee in $(ls -R $patni)
+    do
+    perk=$(echo $lineee | grep $patni | rev | cut -c 2- | rev)
+    if [[ $perk == "" ]]
+    then
+    find $patni -name $lineee | sed '/^$/d' >> ~/lab5/TEMPFORBACK
+    fi
+    done
+   
+    for lin in $(cat ~/lab5/TEMPFORSORS | sed '/^$/d')
+    do
+    pathorfile=$(echo $lin | awk -F '/' '{$1=""; $2=""; $3=""; $4=""; OFS="/"; print $0}' | cut -c 5-)
+    ooo=$pathi"/"$pathorfile
+    if [[ $pathorfile != "" ]]
+    then
+        if [[ -f $ooo ]]
+        then
+            sovpad=$(grep -e $pathorfile ~/lab5/TEMPFORBACK | awk -F '/' '{$1=""; $2=""; $3=""; $4=""; OFS="/"; print $0}' | cut -c 5-)
+            if [[ $sovpad == "" ]]
+            then
+                cp $pathi"/"$pathorfile /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile
+                echo $pathorfile >> ~/lab5/tempadd  
+            else
+                if [[ $(stat -c%s $pathi"/"$pathorfile) -ne $(stat -c%s /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile) ]]
+                then   
+                    cp /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile"."$scriptDate
+                    rm -- /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile
+                    cp $pathi"/"$pathorfile /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile
+                    echo $pathorfile" "$pathorfile"."$scriptDate >> ~/lab5/tempchange
+                fi
+            fi
+        else
+           
+            if [[ -d /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile ]]
+                then
+                echo > /dev/null
+                else
+                mkdir /home/user/$(echo $findDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')/$pathorfile
+                echo $pathorfile >> ~/lab5/tempDIRadd
+            fi
+        fi
+    fi
+    done
+    changedflag=$(cat ~/lab5/tempchange)
+    addedflag=$(cat ~/lab5/tempadd)
+    if [[ $changedflag == "" && $addedflag == "" ]]
+    then
+        if [[ $(cat ~/lab5/tempDIRadd) == "" ]]
+        then
+            echo "Изменений в каталоге с резервными копиями не потребовалось!" >> /home/user/backup-report
+        else
+            echo "Внесены изменения в каталог с резервными копиями "$findDate >> /home/user/backup-report
+            cat ~/lab5/tempDIRadd | sed '/^$/d' >> /home/user/backup-report
+        fi
+        else
+        echo "Внесены изменения в каталог с резервными копиями "$findDate >> /home/user/backup-report
+        cat ~/lab5/tempadd | sed '/^$/d' >> /home/user/backup-report
+        cat ~/lab5/tempchange | sed '/^$/d' >> /home/user/backup-report
+    fi
+fi
+else
+    echo "create catalog cause not find it"
+    mkdir /home/user/$(echo $scriptDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')
+    esflag=$(ls /home/user/source)
+    if [[ $esflag != "" ]]
+    then
+        cp -R /home/user/source/* /home/user/$(echo $scriptDate | awk -F '-' '{print "Backup-"$1"-"$2"-"$3}')
+    fi
+    echo "Каталог с резервными копиями создан "$scriptDate >> /home/user/backup-report  
+    cat ~/lab5/TEMPFORSORS | awk -F '/' '{$1=""; $2=""; $3=""; $4=""; OFS="/"; print $0}' | cut -c 5- | sed '/^$/d' >> /home/user/backup-report
+fi

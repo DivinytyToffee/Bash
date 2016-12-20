@@ -1,0 +1,2 @@
+#!/bin/bash
+ps -u root o pid,command | wc -l > 1file.txt #сделал для рута т.к нету юзера

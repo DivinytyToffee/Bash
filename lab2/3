@@ -1,0 +1,5 @@
+#!/bin/bash
+email="[a-zA-Z0-9_.]+@[a-zA-Z]+(\\.[a-zA-Z]+)*"
+input="/etc/*"
+output="$PWD/emails.lst"
+grep -E -h -s -o -w $email $input | awk '{printf("%s, ",$1)}' | sed -E "s/$email,\s$//g" > $output

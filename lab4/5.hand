@@ -1,0 +1,44 @@
+#!/bin/bash
+act="+"
+rez=1
+(tail -n 0 5.txt) |
+while true
+do
+read LINE;
+case $LINE in
+"+")
+echo "Add"
+act="+"
+;;
+"*")
+echo "Mult"
+act="*"
+;;
+[0-9]*)
+{
+if [[ $act == "+" ]]
+then
+let rez=$rez+$LINE
+else
+let rez=$rez*$LINE
+fi
+}
+;;
+"QUIT")
+{
+echo "Exit"
+echo "result is $rez"
+killall tail
+exit
+}
+;;
+*)
+{
+echo "Incorrect"
+echo "result is $rez"
+killall tail
+exit
+}
+;;
+esac
+done

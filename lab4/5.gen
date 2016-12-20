@@ -1,0 +1,9 @@
+#!/bin/bash
+./5.hand > 5.txt
+LINE=""
+while [ "$LINE" != "QUIT" ]
+do
+read LINE
+echo "$LINE" >> 5.txt
+
+done

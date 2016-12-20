@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo $$ > pid.txt
+echo "Activata"
+x=1
+konec()
+{
+echo "Exit becouse signal"
+kill -9 $$
+}
+trap 'konec' SIGTERM
+while true;
+do
+let x=$x+1
+done

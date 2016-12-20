@@ -1,0 +1,33 @@
+#!/bin/bash
+filename=$1
+if [[ -d $filename ]]
+then
+echo "Передан не файл а каталог!"
+kill -2 $$
+fi
+if [[ $filename == "" ]]
+then
+echo "Не передано имя файла!"
+kill -2 $$
+fi
+checkforfile=$(find ./$filename 2> /dev/null)
+if [[ $checkforfile == "" ]]
+then
+echo "Данный файл в текущем каталоге отсутствует!"
+kill -2 $$
+fi
+str=""
+str=$(find ~ -name '.trash/' 2> finddirerror.txt)
+if [[ $str == "" ]]
+then
+mkdir ~/.trash
+fi
+num=$(date +%s)
+let num=$num%100000
+ln -- $filename ~/.trash/$num 2>linkerror.txt && rm -- $filename 2>rmerror.txt
+str=$(find '.trash.log' ~ 2> findfileerror.txt)
+if [[ $str == "" ]]
+then
+touch ~/.trash.log
+fi
+echo "$PWD/$filename $num" >> ~/.trash.log

@@ -1,0 +1,7 @@
+#!/bin/bash
+info="\\(INFO\\)"
+warning="\\(WAR\\)"
+input="/var/log/Xorg.0.log"
+output="$PWD/full.log"
+grep -E -h -s $warning $input | sed -E "s/$warning/Warning:/" > $output
+grep -E -h -s $info $input | sed -E "s/$info/Information:/" >> $output

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+time=$(date +%F_%T)
+rm ~/report
+rm -R ~/test
+mkdir ~/test &&
+{
+echo "catolog test was created successfully" > ~/report
+touch ~/test/$time
+}
+ping www.net_nikogo.ru || echo "error" >> ~/report

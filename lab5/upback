@@ -1,0 +1,45 @@
+#!/bin/bash
+echo > ~/lab5/tempub
+echo > ~/lab5/tempres
+folder=$(ls /home/user | grep 'Backup' | sort -r | head -1)
+if [[ $folder == "" ]]
+then
+echo "Нет каталога с резервными копиями! Пожалуйста, создайте его!"
+fi
+checkforrestore=$(find /home/user/restore 2> /dev/null)
+if [[ $checkforrestore == "" ]]
+then
+mkdir /home/restore
+fi
+ 
+pathi="/home/"$folder
+for line in $(ls -R $pathi)
+do
+    per=$(echo $line | grep $pathi)
+    if [[ $per == "" ]]
+    then
+    find $pathi -name $line | sed '/^$/d' >> ~/lab5/tempub
+    fi
+done
+eBflag=$(ls $pathi)
+if [[ $eBflag != "" ]]
+then
+    cat ~/lab5/tempub | grep -v '\.[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}' | sed '/^$/d' >> ~/lab5/tempres
+fi
+  
+for lin in $(cat ~/lab5/tempres)
+do
+    pathorfile=$(echo $lin | awk -F '/' '{$1=""; $2=""; $3=""; $4=""; OFS="/"; print $0}' | cut -c 5- | sed '/^$/d')
+    ooo=$pathi"/"$pathorfile
+    if [[ -f $ooo ]]
+    then
+        cp $ooo /home/restore/$pathorfile
+    else
+        if [[ -d /home/restore/$pathorfile ]]
+        then
+            echo > /dev/null
+        else
+            mkdir /home/restore/$pathorfile
+        fi
+    fi
+done

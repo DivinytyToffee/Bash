@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dir /var/log/ > list.txt
+grep -n "/pm/" list.txt
+sed '$!N;$!D' list.txt

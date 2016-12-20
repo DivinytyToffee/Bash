@@ -1,0 +1,4 @@
+#!/bin/bash
+
+nice -n 2 ./4.cyc
+./4.cyc

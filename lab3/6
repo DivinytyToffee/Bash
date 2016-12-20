@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+ParentPID=0
+avgatomgr=1
+nextavgatom=0
+k=1
+
+accstring=""
+while read str
+do
+nextPID=$(echo $str | cut -d: -f2 | sed -e s/Parent_ProcessID=/""/)
+nextavgatom=$(echo $str | cut -d: -f3 | sed -e s/Average_Time=/""/)
+echo $nextavgatom > 6filebug.txt
+
+if [[ $ParentPID = $nextPID ]]
+then
+avgatomgr= $(echo "$avgatomgr + $nextavgatom" | bc )
+let k=$k+1
+else
+#avgatomgr=$(echo "$avgatomgr" )
+
+string=$string$'\n''Average_Time_Children_of_ParentID= '"$ParentPID"' is '
+
+
+string=$string"$nextavgatom"
+echo $string >> 6filebug.txt
+
+avgatomgr="0$nextavgatom"
+ParentPID=$nextPID
+k=1
+fi
+
+string=$string$'\n'$str
+
+done < 5file.txt
+
+avgatomgr=$(echo "scale=6; $avgatomgr/$k" | bc )
+string=$string$'\n''Average_Time_Children_of_ParentID='"$ParentPID"' is '"0$avgatomgr"
+echo "$string" | sed -e '1,4d' > 6file.txt

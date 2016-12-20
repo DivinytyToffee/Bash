@@ -1,0 +1,4 @@
+#!/bin/bash
+grep -hr '^ACPI.*' /var/log/ > $PWD/errors.log
+grep '[[:alnum:]].[[:alpha:]]' $PWD/errors.log            
+ #cпросить почему не работает [:alnum:] и [:alpha:]

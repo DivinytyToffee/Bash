@@ -1,0 +1,77 @@
+#!/bin/bash
+filename=$1
+#echo $filename
+if [[ $filename == "" ]]
+	then
+	echo "Не передано имя файла!"
+	kill -2 $$
+fi
+checkforfile=$(cat ~/.trash.log | grep -e "$filename " | cat) 
+if [[ $checkforfile == "" ]]
+	then
+	echo "Такой файл в trash.log отсутсвует!"
+	kill -2 $$
+fi
+flagyes=0
+current=-1
+all=0
+let all=$all-$(wc -l ~/.trash.log | awk '{print $1}')
+#for line in $(awk '$1~/'"\/$filename"'/ {print $1 $2}' < ~/.trash.log)
+#do
+#grep -e "$filename [0-9]\{5\}" ~/.trash.log)
+while [ $current -ge $all ]
+do
+	line=$(head $current ~/.trash.log | tail -1)
+	#line=$(grep -e "$filename " ~/.trash.log)
+	flagyes=0
+	link=$(echo $line | awk -F " " '{print $2}')
+	path=$(echo $line | awk -F " " '{print $1}')
+	echo $path
+	echo "Восстановить файл? (y or n)"
+	read conf
+	case $conf in
+	'y')
+	      if [[ -f $path ]]
+		then			
+		ln -- ~/.trash/$link $path[$link] 2>scr2linkerror.txt
+                else
+		ln -- ~/.trash/$link $path 2>scr2linkerror.txt
+	      fi
+	      if [[ $? != 0 ]]
+		then
+		ln -- ~/.trash/$link ~/$filename
+		echo "Прошлый каталог отсутсвует, файл восстановлен в домашнем каталоге!"
+              fi
+		rm -- ~/.trash/$link
+		flagyes=1
+	;;
+	'yes')
+		ln -- ~/.trash/$link $path 2>scr2linkerror.txt
+              if [[ $? != 0 ]]
+		then
+		ln -- ~/.trash/$link ~/$filename
+		echo "Прошлый каталог отсутсвует, файл восстановлен в домашнем каталоге!"
+	     fi
+		rm -- ~/.trash/$link
+		flagyes=1
+	;;
+	'n')
+	;;
+	'no')
+	;;
+	*)
+		echo "Неправильный формат подтверждения!"
+		kill -2 $$
+	;;
+	esac
+	if [[ $flagyes == "1" ]]
+		then
+		grep -v $link ~/.trash.log > ~/TEMP.trash.log
+		mv ~/TEMP.trash.log ~/.trash.log
+	fi
+let current=$current-1
+done
+# < ~/.trash.log
+
+
+#find ~/.trash.log -name $filename 2> /dev/null)

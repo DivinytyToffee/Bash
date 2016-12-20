@@ -1,0 +1,36 @@
+#!/bin/bash
+
+for pid in $(ps -eo pid) #: sed 's/^[\t]*//')
+
+do
+
+statusPATH="/proc/"$pid"/status"
+
+schedPATH="/proc/"$pid"/sched"
+
+parentPID=$(grep -ws 'PPid' $statusPATH | grep -o '[0-9]\+')
+
+avgatom=$(grep -ws 'se.sum_exec_runtime' $schedPATH | grep -o '[0-9].[0-9]\+')
+
+abbc=$(grep -ws 'nr_switches' $schedPATH | grep -o '[0-9]\+')
+
+avgatom=$(echo "scale=6; $avgatom/$abbc" | bc )
+if [[ $avgatom = "" ]]
+
+then avgatom=0
+
+fi
+
+if [[ $parentPID != "" ]]
+
+then 
+
+echo  "ProcessID= $pid : Parent_ProcessID= $parentPID : Average_Time=0$avgatom" >> test.bmp
+
+fi
+
+done
+
+sort -nk 5 < test.bmp  > 5file.txt
+
+rm -R test.bmp
