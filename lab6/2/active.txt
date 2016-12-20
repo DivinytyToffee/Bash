@@ -1,0 +1,370 @@
+
+Имя_службы: AeLookupSvc
+Выводимое_имя: Служба проверки совместимости приложений
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: ALG
+Выводимое_имя: Служба шлюза уровня приложения
+        Тип                : 10  WIN32_OWN_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Browser
+Выводимое_имя: Обозреватель компьютеров
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: CryptSvc
+Выводимое_имя: Службы криптографии
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: DcomLaunch
+Выводимое_имя: Запуск серверных процессов DCOM
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Dhcp
+Выводимое_имя: DHCP-клиент
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: dmserver
+Выводимое_имя: Диспетчер логических дисков
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Dnscache
+Выводимое_имя: DNS-клиент
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: ERSvc
+Выводимое_имя: Служба регистрации ошибок
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Eventlog
+Выводимое_имя: Журнал событий
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: EventSystem
+Выводимое_имя: Система событий COM+
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: FreeSSHDService
+Выводимое_имя: FreeSSHDService
+        Тип                : 110  WIN32_OWN_PROCESS  (interactive)
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: helpsvc
+Выводимое_имя: Справка и поддержка
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: lanmanserver
+Выводимое_имя: Сервер
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: lanmanworkstation
+Выводимое_имя: Рабочая станция
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: LmHosts
+Выводимое_имя: Модуль поддержки NetBIOS через TCP/IP
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: MSDTC
+Выводимое_имя: Координатор распределенных транзакций
+        Тип                : 10  WIN32_OWN_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Netman
+Выводимое_имя: Сетевые подключения
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Nla
+Выводимое_имя: Служба сетевого расположения (NLA)
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: PlugPlay
+Выводимое_имя: Plug and Play
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: PolicyAgent
+Выводимое_имя: Службы IPSEC
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: ProtectedStorage
+Выводимое_имя: Защищенное хранилище
+        Тип                : 120  WIN32_SHARE_PROCESS  (interactive)
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: RemoteRegistry
+Выводимое_имя: Удаленный реестр
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: RpcSs
+Выводимое_имя: Удаленный вызов процедур (RPC)
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: SamSs
+Выводимое_имя: Диспетчер учетных записей безопасности
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Schedule
+Выводимое_имя: Планировщик заданий
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: seclogon
+Выводимое_имя: Вторичный вход в систему
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: SENS
+Выводимое_имя: Уведомление о системных событиях
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: SharedAccess
+Выводимое_имя: Брандмауэр Windows/Общий доступ к Интернету (ICS)
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: ShellHWDetection
+Выводимое_имя: Определение оборудования оболочки
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: Spooler
+Выводимое_имя: Диспетчер очереди печати
+        Тип                : 110  WIN32_OWN_PROCESS  (interactive)
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: TermService
+Выводимое_имя: Службы терминалов
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN))
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: TrkWks
+Выводимое_имя: Клиент отслеживания изменившихся связей
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: W32Time
+Выводимое_имя: Служба времени Windows
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: winmgmt
+Выводимое_имя: Инструментарий управления Windows
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: wuauserv
+Выводимое_имя: Автоматическое обновление
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0
+
+Имя_службы: WZCSVC
+Выводимое_имя: Беспроводная настройка
+        Тип                : 20  WIN32_SHARE_PROCESS  
+        Состояние          : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        Код_выхода_Win32   : 0  (0x0)
+        Код_выхода_службы  : 0  (0x0)
+        Контрольная_точка  : 0x0
+        Ожидание           : 0x0

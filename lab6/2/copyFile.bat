@@ -1,0 +1,1 @@
+xcopy /Z c:\Big_file.txt

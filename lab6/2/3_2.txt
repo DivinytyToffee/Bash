@@ -1,0 +1,6 @@
+@echo off
+sc stop dnscache
+timeout /t 2
+sc query type= service > active2.txt
+call 3_c.bat
+sc start dnscache

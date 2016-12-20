@@ -1,0 +1,2 @@
+@echo off
+fc active.txt active2.txt > comp.txt

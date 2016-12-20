@@ -1,0 +1,14 @@
+
+
+    655360 байт - всего обычной памяти
+    655360 байт - доступно для MS-DOS
+    627408 максимальный размер исполняемой программы
+
+   1048576 байт - всего непрерывной дополнительной памяти
+         0 байт - доступно непрерывной дополнительной памяти
+    941056 байт - доступной памяти XMS
+           резидентная часть MS-DOS загружена в сегмент HMA
+
+Microsoft Windows [Версия 5.2.3790]
+Availability  BytesPerSector  Capabilities  CapabilityDescriptions  Caption                                    CompressionMethod  ConfigManagerErrorCode  ConfigManagerUserConfig  CreationClassName  DefaultBlockSize  Description                            DeviceID            ErrorCleared  ErrorDescription  ErrorMethodology  Index  InstallDate  InterfaceType  LastErrorCode  Manufacturer                                                    MaxBlockSize  MaxMediaSize  MediaLoaded  MediaType              MinBlockSize  Model                                      Name                NeedsCleaning  NumberOfMediaSupported  Partitions  PNPDeviceID                                                              PowerManagementCapabilities  PowerManagementSupported  SCSIBus  SCSILogicalUnit  SCSIPort  SCSITargetId  SectorsPerTrack  Signature  Size         Status  StatusInfo  SystemCreationClassName  SystemName  TotalCylinders  TotalHeads  TotalSectors  TotalTracks  TracksPerCylinder  
+              512             {3, 4}                                VMware, VMware Virtual S SCSI Disk Device                     0                       FALSE                    Win32_DiskDrive                      Дисковый накопитель  \\.\PHYSICALDRIVE0                                                    0                   SCSI                          (Стандартные дисковые накопители)                              TRUE         Fixed hard disk media                VMware, VMware Virtual S SCSI Disk Device  \\.\PHYSICALDRIVE0                                         1           SCSI\DISK&VEN_VMWARE_&PROD_VMWARE_VIRTUAL_S&REV_1.0\4&1588251B&0&000000                                                         0        0                2         0             56               992885549  26840002560  OK                  Win32_ComputerSystem     MISHA-PC    3671            255         52421880      936105       255                

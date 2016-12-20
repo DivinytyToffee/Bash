@@ -1,0 +1,102 @@
+
+Модуль       Название               Тип драйвера  Дата ссылки           
+============ ====================== ============= ======================
+ACPI         Драйвер Microsoft ACPI Kernel        17.02.2007 8:58:47    
+ACPIEC       ACPIEC                 Kernel        25.03.2003 10:16:26   
+AFD          AFD                    Kernel        17.02.2007 9:28:16    
+agp440       Intel - фильтр шины AG Kernel        17.02.2007 8:58:53    
+AsyncMac     Драйвер асинхронного н Kernel        25.03.2003 10:11:27   
+atapi        Стандартный контроллер Kernel        17.02.2007 9:07:34    
+Atmarpc      Протокол клиента ATM A Kernel        17.02.2007 8:54:34    
+audstub      Драйвер заглушки аудио Kernel        25.03.2003 10:09:12   
+Beep         Beep                   Kernel        25.03.2003 10:03:04   
+cbidf2k      cbidf2k                Kernel        25.03.2003 10:05:00   
+Cdfs         Cdfs                   File System   17.02.2007 9:27:08    
+Cdrom        Драйвер CD-ROM дисково Kernel        17.02.2007 9:07:48    
+ClusDisk     Драйвер дисков кластер Kernel        17.02.2007 9:02:55    
+CmBatt       Драйвер AC-адаптера бл Kernel        17.02.2007 8:58:51    
+Compbatt     Драйвер составной бата Kernel        17.02.2007 8:58:51    
+crcdisk      CRC драйвер фильтра ди Kernel        17.02.2007 9:09:50    
+DfsDriver    DfsDriver              File System   17.02.2007 8:51:17    
+Disk         Драйвер диска          Kernel        17.02.2007 9:07:51    
+dmboot       dmboot                 Kernel        17.02.2007 9:10:48    
+dmio         Драйвер диспетчера лог Kernel        17.02.2007 9:10:44    
+dmload       dmload                 Kernel        25.03.2003 10:08:08   
+E1000        Intel(R) PRO/1000 драй Kernel        13.01.2003 22:12:12   
+Fastfat      Fastfat                File System   17.02.2007 9:27:55    
+Fdc          Fdc                    Kernel        17.02.2007 9:07:16    
+Fips         Fips                   Kernel        17.02.2007 9:26:33    
+Flpydisk     Flpydisk               Kernel        25.03.2003 10:04:32   
+FltMgr       FltMgr                 File System   17.02.2007 8:51:08    
+Ftdisk       Драйвер диспетчера том Kernel        17.02.2007 9:08:05    
+Gpc          Общий классификатор па Kernel        17.02.2007 8:58:37    
+hidusb       Драйвер класса HID Mic Kernel        25.03.2003 10:10:17   
+HTTP         HTTP                   Kernel        17.02.2007 9:28:12    
+i8042prt     Драйвер i8042-клавиату Kernel        17.02.2007 9:30:40    
+imapi        Драйвер фильтра записи Kernel        17.02.2007 9:08:22    
+IntelIde     IntelIde               Kernel        17.02.2007 9:07:32    
+intelppm     Драйвер Intel процессо Kernel        17.02.2007 8:48:30    
+Ip6Fw        IPv6 драйвер брандмауэ Kernel        17.02.2007 8:56:24    
+IpFilterDriv Драйвер фильтра IP-тра Kernel        17.02.2007 8:59:05    
+IpNat        Транслятор сетевого IP Kernel        17.02.2007 8:59:08    
+IPSec        Драйвер IPSEC          Kernel        17.02.2007 9:29:28    
+isapnp       Драйвер PnP ISA/EISA ш Kernel        17.02.2007 8:58:57    
+Kbdclass     Драйвер класса клавиат Kernel        17.02.2007 9:05:39    
+KSecDD       KSecDD                 Kernel        17.02.2007 8:46:32    
+mnmdd        mnmdd                  Kernel        25.03.2003 10:07:53   
+Modem        Modem                  Kernel        17.02.2007 9:01:30    
+Mouclass     Драйвер класса мыши    Kernel        25.03.2003 10:03:09   
+mouhid       Драйвер мыши HID       Kernel        25.03.2003 10:03:12   
+MountMgr     Диспетчер точек подклю Kernel        17.02.2007 9:05:35    
+MRxDAV       Перенаправиль клиентов File System   17.02.2007 8:50:49    
+MRxSmb       MRXSMB                 File System   17.02.2007 9:28:15    
+Msfs         Msfs                   File System   17.02.2007 8:50:33    
+mssmbios     Microsoft System Manag Kernel        17.02.2007 8:59:12    
+Mup          Служба MUP             File System   17.02.2007 9:27:41    
+NDIS         Системный драйвер NDIS Kernel        17.02.2007 9:28:49    
+NdisTapi     NDIS-драйвер TAPI удал Kernel        17.02.2007 8:59:19    
+Ndisuio      NDIS-протокол ввода-вы Kernel        17.02.2007 8:58:25    
+NdisWan      NDIS-драйвер WAN удале Kernel        17.02.2007 9:29:22    
+NDProxy      NDIS прокси            Kernel        17.02.2007 8:59:21    
+NetBIOS      Интерфейс NetBIOS      File System   17.02.2007 8:58:29    
+NetBT        NetBios через TCP/IP   Kernel        17.02.2007 9:28:57    
+Npfs         Npfs                   File System   17.02.2007 8:50:36    
+Ntfs         Ntfs                   File System   17.02.2007 9:27:23    
+Null         Null                   Kernel        25.03.2003 10:03:05   
+Parport      Parport                Kernel        17.02.2007 9:06:42    
+PartMgr      Диспетчер разделов     Kernel        17.02.2007 9:29:25    
+PCI          Драйвер PCI шины       Kernel        17.02.2007 8:59:03    
+Pcmcia       Pcmcia                 Kernel        17.02.2007 8:59:01    
+PptpMiniport Минипорт WAN (PPTP)    Kernel        17.02.2007 9:29:20    
+Ptilink      Драйвер прямой паралле Kernel        17.02.2007 9:06:38    
+RasAcd       Драйвер автоматических Kernel        25.03.2003 10:11:50   
+Rasl2tp      Минипорт WAN (L2TP)    Kernel        17.02.2007 9:29:02    
+RasPppoe     Драйвер PPPoE удаленно Kernel        17.02.2007 8:59:23    
+Raspti       Прямой параллельный по Kernel        17.02.2007 8:59:23    
+Rdbss        Rdbss                  File System   17.02.2007 9:27:37    
+RDPCDD       RDPCDD                 Kernel        25.03.2003 10:03:05   
+rdpdr        Драйвер перенаправител Kernel        17.02.2007 8:51:00    
+RDPWD        RDPWD                  Kernel        17.02.2007 8:44:38    
+redbook      Драйвер фильтра воспро Kernel        17.02.2007 9:07:26    
+Secdrv       Secdrv                 Kernel        31.08.2004 17:42:55   
+serenum      Драйвер фильтра Serenu Kernel        17.02.2007 9:06:44    
+Serial       Драйвер последовательн Kernel        17.02.2007 9:06:46    
+Sfloppy      Sfloppy                Kernel        25.03.2003 10:05:20   
+Srv          Srv                    File System   17.02.2007 9:27:20    
+swenum       Драйвер программной ши Kernel        17.02.2007 9:05:56    
+symmpi       symmpi                 Kernel        14.12.2004 0:03:14    
+Tcpip        Драйвер протокола TCP/ Kernel        17.02.2007 9:28:05    
+TDPIPE       TDPIPE                 Kernel        17.02.2007 8:44:31    
+TDTCP        TDTCP                  Kernel        17.02.2007 8:44:32    
+TermDD       Драйвер устройства тер Kernel        17.02.2007 8:44:32    
+Udfs         Udfs                   File System   17.02.2007 8:50:32    
+Update       Драйвер обновления мик Kernel        17.02.2007 9:28:59    
+usbccgp      Драйвер универсального Kernel        17.02.2007 9:13:08    
+usbehci      Драйвер минипорта Micr Kernel        17.02.2007 9:12:56    
+usbhub       Драйвер стандартного к Kernel        17.02.2007 9:13:05    
+usbuhci      Драйвер минипорта Micr Kernel        17.02.2007 9:13:02    
+vga          vga                    Kernel        17.02.2007 9:10:30    
+VgaSave      Контроллер VGA-дисплея Kernel        17.02.2007 9:10:30    
+VolSnap      Тома запоминающих устр Kernel        17.02.2007 9:08:23    
+Wanarp       Драйвер удаленного дос Kernel        17.02.2007 8:59:17    
+WLBS         Балансировка нагрузки  Kernel        17.02.2007 9:27:46    

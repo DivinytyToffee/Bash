@@ -1,0 +1,4 @@
+@echo off
+del *.txt
+sc query type= service > active.txt
+call 3_2.bat
